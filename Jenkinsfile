@@ -7,6 +7,7 @@ pipeline {
   stages {
     stage('check out') {
       steps {
+        cleanWs()
         git(url: 'https://github.com/dhetong/maven-samples-A6.git', branch: 'master')
       }
     }
