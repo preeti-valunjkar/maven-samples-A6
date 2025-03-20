@@ -7,33 +7,7 @@ pipeline {
   stages {
     stage('check out') {
       steps {
-        git(url: 'https://github.com/preeti-valunjkar/maven-samples-A6.git', branch: 'master')
-      }
-    }
-
-    // stages {
-    // stage('test') {
-    //   steps {
-    //     sh 'mvn clean test'
-    //   }
-    // }
-
-    // stage('detect first bad commit') {
-    //   steps {
-    //     sh 'git bisect start 198644632661c67b6c32f59e9047c11a70685e15 98ac319c0cff47b4d39a1a7b61b4e195cfa231e5'
-    //     sh 'git bisect run mvn clean test'
-    //   }
-    // }
-
-    stage('Test') {
-      steps {
-        sh 'mvn clean test'
-      }
-      post {
-        failure {
-          sh 'git bisect start 198644632661c67b6c32f59e9047c11a70685e15 98ac319c0cff47b4d39a1a7b61b4e195cfa231e5'
-          sh 'git bisect run mvn clean test'
-        }
+        git(url: 'https://github.com/dhetong/maven-samples-A6.git', branch: 'master')
       }
     }
 
