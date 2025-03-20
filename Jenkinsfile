@@ -21,7 +21,7 @@ pipeline {
       }
       post {
         failure {
-          env.RUN_BISECT = "true"
+            env.RUN_BISECT = "true"
         }
       }
     }
